@@ -18,6 +18,7 @@ vim & nvim plugin for quickly print some thing base by filetype or filename
       \ 'go': 'fmt.Println(%s)',
       \ 'js': 'console.log(%s)',
       \ 'ts': 'console.log(%s)',
+      \ 'vue': 'console.log(`logger-%s` %s)',
       \ 'sh': 'echo $%s',
       \ }
 
