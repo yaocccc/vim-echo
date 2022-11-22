@@ -6,7 +6,7 @@ let s:default = {
     \ 'go': 'fmt.Println(%s)',
     \ 'js': 'console.log(%s)',
     \ 'ts': 'console.log(%s)',
-    \ 'vue': 'console.log(`logger-%s` %s)',
+    \ 'vue': 'console.log(%s)',
     \ 'sh': 'echo $%s',
     \ }
 let s:echo_by_ft = get(g:, 'vim_echo_by_ft', s:default)
