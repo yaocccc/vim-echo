@@ -1,6 +1,6 @@
 # vim-echo
 
-vim & nvim plugin for quickly print some thing base by filetype
+vim & nvim plugin for quickly print some thing base by filetype or filename
 
 ## usage
 
