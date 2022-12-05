@@ -2,6 +2,8 @@
 
 vim & nvim plugin for quickly print some thing base by filetype or filename
 
+![avatar](./show.gif)
+
 ## usage
 
 ```plantext
