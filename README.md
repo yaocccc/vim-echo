@@ -23,7 +23,7 @@ vim & nvim plugin for quickly print some thing base by filetype or filename
   " you can set custom config for difference filename or file ext, or you can set it is ''
   let s:vim_echo_by_file = {
       \ 'vim': 'echo("[ECHO]:" . [ECHO])',
-      \ 'go': 'fmt.Printf("[ECHO]: %+v\f", [ECHO])',
+      \ 'go': 'fmt.Printf("[ECHO]: %+v\n", [ECHO])',
       \ 'js': 'console.log(`[ECHO]: ${[ECHO]}`)',
       \ 'ts': 'console.log(`[ECHO]: ${[ECHO]}`)',
       \ 'vue': 'console.log(`[ECHO]: ${[ECHO]}`)',
