@@ -15,7 +15,7 @@ vim & nvim plugin for quickly print some thing base by filetype or filename
 ```options
   e.g. 
 
-  [ECHO] will be replace to you selected context.
+  [ECHO] will be replace to your selected context.
 
   Your selected context: hello
   fmt.Printf("[ECHO]: %s", [ECHO]) => fmt.Printf("hello: %s", hello);
