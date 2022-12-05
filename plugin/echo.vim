@@ -2,12 +2,12 @@ if exists('s:loaded') | finish | endif
 let s:loaded = 1
 
 let s:default = {
-    \ 'vim': 'echo(%s)',
-    \ 'go': 'fmt.Println(%s)',
-    \ 'js': 'console.log(%s)',
-    \ 'ts': 'console.log(%s)',
-    \ 'vue': 'console.log(%s)',
-    \ 'sh': 'echo $%s',
+    \ 'vim': 'echo([ECHO])',
+    \ 'go': 'fmt.Printf("%+v\f", [ECHO])',
+    \ 'js': 'console.log([ECHO])',
+    \ 'ts': 'console.log([ECHO])',
+    \ 'vue': 'console.log([ECHO])',
+    \ 'sh': 'echo $[ECHO]',
     \ }
 let s:echo_by_ft = get(g:, 'vim_echo_by_ft', s:default)
 
@@ -15,8 +15,8 @@ func s:echo()
     let line = line('.')
     let tag = getline(line)[col("'<") - 1 : col("'>") - 2]
     let space = substitute(getline(line), '\v(^\s*).*', '\1', '')
-    let express = get(s:echo_by_ft, expand('%:t'), get(s:echo_by_ft, expand('%:e'), 'print(%s)'))
-    let tagcount = count(express, '%s')
+    let express = get(s:echo_by_ft, expand('%:t'), get(s:echo_by_ft, expand('%:e'), 'print([ECHO])'))
+    let tagcount = count(express, '[ECHO]')
     if 
          \ tagcount == 1 | call appendbufline('%', line, printf(space . express, tag))
     elseif tagcount == 2 | call appendbufline('%', line, printf(space . express, tag, tag))

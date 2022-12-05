@@ -13,13 +13,22 @@ vim & nvim plugin for quickly print some thing base by filetype or filename
 ```
 
 ```options
+  e.g. 
+
+  [ECHO] will be replace to you selected context.
+
+  Your selected context: hello
+  fmt.Printf("[ECHO]: %s", [ECHO]) => fmt.Printf("hello: %s", hello);
+  
+  ---
+
   let s:vim_echo_by_ft = {
-      \ 'vim': 'echo(%s)',
-      \ 'go': 'fmt.Println(%s)',
-      \ 'js': 'console.log(%s)',
-      \ 'ts': 'console.log(%s)',
-      \ 'vue': 'console.log(%s)',
-      \ 'sh': 'echo $%s',
+      \ 'vim': 'echo([ECHO])',
+      \ 'go': 'fmt.Printf([ECHO])',
+      \ 'js': 'console.log([ECHO])',
+      \ 'ts': 'console.log([ECHO])',
+      \ 'vue': 'console.log([ECHO])',
+      \ 'sh': 'echo $[ECHO]',
       \ }
 
   keymap
