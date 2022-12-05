@@ -23,12 +23,12 @@ vim & nvim plugin for quickly print some thing base by filetype or filename
   ---
 
   let s:vim_echo_by_ft = {
-      \ 'vim': 'echo([ECHO])',
-      \ 'go': 'fmt.Printf([ECHO])',
-      \ 'js': 'console.log([ECHO])',
-      \ 'ts': 'console.log([ECHO])',
-      \ 'vue': 'console.log([ECHO])',
-      \ 'sh': 'echo $[ECHO]',
+      \ 'vim': 'echo("[ECHO]:" . [ECHO])',
+      \ 'go': 'fmt.Printf("[ECHO]: %+v\f", [ECHO])',
+      \ 'js': 'console.log(`[ECHO]: ${[ECHO]}`)',
+      \ 'ts': 'console.log(`[ECHO]: ${[ECHO]}`)',
+      \ 'vue': 'console.log(`[ECHO]: ${[ECHO]}`)',
+      \ 'sh': 'echo [ECHO]: $[ECHO]',
       \ }
 
   keymap
