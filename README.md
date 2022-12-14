@@ -28,6 +28,7 @@ vim & nvim plugin for quickly print some thing base by filetype or filename
       \ 'ts': 'console.log(`[ECHO]: ${[ECHO]}`)',
       \ 'vue': 'console.log(`[ECHO]: ${[ECHO]}`)',
       \ 'sh': 'echo [ECHO]: $[ECHO]',
+      \ 'zsh': 'echo [ECHO]: $[ECHO]',
       \ 'go.mod': '[ECHO]',
       \ 'json': '',
       \ }
