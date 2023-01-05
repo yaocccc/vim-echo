@@ -22,7 +22,7 @@ endf
 
 func s:echo()
     let line = line('.')
-    let tag = getline(line)[col("'<") - 1 : col("'>") - 2]
+    let tag = getline(line)[col("'<") - 1 : col("'>") - (&selection == "exclusive" ? 2 : 1)]
     let space = substitute(getline(line), '\v(^\s*).*', '\1', '')
     let express = s:get_express()
     call appendbufline('%', line, space . substitute(express, '\[ECHO\]', tag, 'g'))
