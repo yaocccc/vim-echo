@@ -4,9 +4,10 @@ let s:loaded = 1
 let s:default = {
     \ 'vim': 'echo("[ECHO]:" . [ECHO])',
     \ 'go': 'fmt.Printf("[ECHO]: %+v\n", [ECHO])',
-    \ 'js': 'console.log(`[ECHO]: ${[ECHO]}`)',
-    \ 'ts': 'console.log(`[ECHO]: ${[ECHO]}`)',
-    \ 'vue': 'console.log(`[ECHO]: ${[ECHO]}`)',
+    \ 'c': 'printf("[ECHO]: %s\n", [ECHO]);',
+    \ 'js': 'console.log(`[ECHO]: ${[ECHO]}`);',
+    \ 'ts': 'console.log(`[ECHO]: ${[ECHO]}`);',
+    \ 'vue': 'console.log(`[ECHO]: ${[ECHO]}`);',
     \ 'sh': 'echo [ECHO]: $[ECHO]',
     \ 'zsh': 'echo [ECHO]: $[ECHO]',
     \ }
