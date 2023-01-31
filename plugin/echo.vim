@@ -14,16 +14,24 @@ let s:default = {
 let s:vim_echo_by_file = get(g:, 'vim_echo_by_file', s:default)
 
 func s:get_express()
-    let l:express = get(s:vim_echo_by_file, expand('%:t'), "nop")                              " 匹配文件名   从g:vim_echo_by_file中获取
+    let l:express = get(s:vim_echo_by_file, expand('%:t'), "nop")                                   " 匹配文件名   从g:vim_echo_by_file中获取
     let l:express = l:express ==# "nop" ? get(s:vim_echo_by_file, expand('%:e'), "nop") : l:express " 匹配文件后缀 从g:vim_echo_by_file中获取
     let l:express = l:express ==# "nop" ? get(s:default, expand('%:e'), "nop") : l:express          " 匹配文件后缀 从s:default中获取
-    let l:express = l:express ==# "nop" ? "print([ECHO])" : l:express                                " 默认: print([ECHO])
+    let l:express = l:express ==# "nop" ? "print([ECHO])" : l:express                               " 默认: print([ECHO])
     return l:express
+endf
+
+func s:get_tag()
+    let old = getreg('"')
+    normal! gvy
+    let tag = getreg('"')
+    call setreg('*', old)
+    return tag
 endf
 
 func s:echo()
     let line = line('.')
-    let tag = getline(line)[col("'<") - 1 : col("'>") - (&selection == "exclusive" ? 2 : 1)]
+    let tag = s:get_tag()
     let space = substitute(getline(line), '\v(^\s*).*', '\1', '')
     let express = s:get_express()
     call appendbufline('%', line, space . substitute(express, '\[ECHO\]', tag, 'g'))
