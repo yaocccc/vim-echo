@@ -25,7 +25,7 @@ func s:get_tag()
     let old = getreg('"')
     normal! gvy
     let tag = getreg('"')
-    call setreg('*', old)
+    call setreg('"', old)
     return tag
 endf
 
