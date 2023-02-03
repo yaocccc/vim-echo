@@ -37,3 +37,15 @@ vim & nvim plugin for quickly print some thing base by filetype or filename
   e.g.
     vnoremap <silent> C :<c-u>VECHO<cr>
 ```
+
+## Support
+
+<a href="https://www.buymeacoffee.com/yaocccc" target="_blank">
+  <img src="https://github.com/yaocccc/yaocccc/raw/master/qr.png">
+</a>
+
+<br>
+
+<a href="https://www.buymeacoffee.com/yaocccc" target="_blank">
+  <img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 200px !important;" >
+</a>
